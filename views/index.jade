@@ -1,5 +1,18 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div( ng-controller = 'IndexController as Index' )
+    div( ng-repeat = 'user in Index.users' )
+      h1( ng-bind = 'user.username' )
+      h3( ng-bind = 'user.mail' )
+
+    form( ng-submit = 'Index.submit()' )
+      input(
+        ng-model = 'Index.user.username'
+        placeholder = 'Username'
+      )
+      input(
+        ng-model = 'Index.user.mail'
+        placeholder = 'Mail'
+      )
+      input( type = 'submit' )

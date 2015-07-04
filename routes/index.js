@@ -7,7 +7,7 @@ var router = express.Router();
 /* GET home page. */
 /*jslint unparam: true */
 router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index');
 });
 /*jslint unparam: false */
 

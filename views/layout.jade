@@ -1,7 +1,15 @@
 doctype html
-html
+html(
+  ng-app = 'App'
+)
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    title My new app
+    link(
+      rel = 'stylesheet'
+      href = '/stylesheets/style.css'
+    )
   body
     block content
+
+  script( src = '/angular/angular.min.js' )
+  script( src = '/js/angular-app.js' )
